@@ -35,8 +35,8 @@ export default {
       format: 'umd', // the preferred format
       compact: true,
       exports,
-      sourcemap
-      // globals
+      sourcemap,
+      globals
     },
     {
       // A self-executing function, suitable for inclusion as a <script> tag.
@@ -60,9 +60,9 @@ export default {
       globals
     }
   ],
-  // external: [
-  //   ...Object.keys(pkg.dependencies)
-  // ],
+  external: [
+    ...Object.keys(pkg.dependencies)
+  ],
   plugins: [
     typescript({
       typescript: require('typescript'),
