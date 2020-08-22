@@ -7,11 +7,12 @@ import sass from 'rollup-plugin-sass';
 import filesize from 'rollup-plugin-filesize';
 
 // Default configs
-const name = 'VEmojiPicker';
-const exports = 'named';
-const sourcemap = false;
+const name = 'VEmojiPicker'
+const exports = 'named'
+const sourcemap = false
 const globals = {
-  'vue-property-decorator': 'vuePropertyDecorator'
+  vue: 'Vue',
+  // 'vue-property-decorator': 'vuePropertyDecorator'
 };
 
 export default {
@@ -36,7 +37,8 @@ export default {
       format: 'umd', // the preferred format
       compact: true,
       exports,
-      sourcemap
+      sourcemap,
+      globals
     },
     {
       // A self-executing function, suitable for inclusion as a <script> tag.
@@ -58,7 +60,7 @@ export default {
       exports,
       sourcemap,
       globals
-    },
+    }
   ],
   external: [
     ...Object.keys(pkg.dependencies)
