@@ -29,6 +29,16 @@ export default {
       sourcemap
     },
     {
+      // Keep the bundle as an ES module file, suitable for other bundlers
+      // and inclusion as a <script type=module> tag in modern browsers
+      name,
+      file: pkg.umd,
+      format: 'umd', // the preferred format
+      compact: true,
+      exports,
+      sourcemap
+    },
+    {
       // A self-executing function, suitable for inclusion as a <script> tag.
       // (If you want to create a bundle for your application, you probably want to use this.)
       name,

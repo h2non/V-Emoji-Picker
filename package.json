@@ -17,6 +17,7 @@
   "main": "./lib/v-emoji-picker.cjs.js",
   "module": "./lib/v-emoji-picker.esm.js",
   "unpkg": "./lib/v-emoji-picker.unpkg.js",
+  "umd": "./lib/v-emoji-picker.umd.js",
   "browser": {
     "./sfc": "src/VEmojiPicker.vue"
   },
