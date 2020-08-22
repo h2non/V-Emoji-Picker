@@ -11,7 +11,7 @@ const name = 'VEmojiPicker'
 const exports = 'named'
 const sourcemap = false
 const globals = {
-  'vue-property-decorator': 'vuePropertyDecorator'
+  'vue-property-decorator': 'VuePropertyDecorator'
 };
 
 export default {
