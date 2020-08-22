@@ -11,8 +11,7 @@ const name = 'VEmojiPicker'
 const exports = 'named'
 const sourcemap = false
 const globals = {
-  vue: 'Vue',
-  // 'vue-property-decorator': 'vuePropertyDecorator'
+  'vue-property-decorator': 'vuePropertyDecorator'
 };
 
 export default {
@@ -30,15 +29,14 @@ export default {
       sourcemap
     },
     {
-      // Keep the bundle as an ES module file, suitable for other bundlers
-      // and inclusion as a <script type=module> tag in modern browsers
+      // Universal module definition suitable for CDN/script tag
       name,
       file: pkg.umd,
       format: 'umd', // the preferred format
       compact: true,
       exports,
-      sourcemap,
-      globals
+      sourcemap
+      // globals
     },
     {
       // A self-executing function, suitable for inclusion as a <script> tag.
@@ -62,9 +60,9 @@ export default {
       globals
     }
   ],
-  external: [
-    ...Object.keys(pkg.dependencies)
-  ],
+  // external: [
+  //   ...Object.keys(pkg.dependencies)
+  // ],
   plugins: [
     typescript({
       typescript: require('typescript'),
